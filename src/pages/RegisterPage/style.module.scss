@@ -1,0 +1,45 @@
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 22px;
+
+    .registerHeader {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        img {
+            margin: 0;
+        }
+
+        button {
+            background-color: var(--gray-3);
+            color: var(--gray-0);
+            border: none;
+            border-radius: 0.25rem;
+            height: 2.5rem;
+            padding: 0 1rem;
+            cursor: pointer;
+        }
+    }
+
+    .registerContent{
+        background-color: var(--gray-3);
+
+        h1{
+            font-size: var(--font-size-title-1);
+            color: var(--gray-0);
+            padding-top: 20px;
+            background-color: var(--gray-3);
+        }
+
+        p{
+            font-size: var(--font-size-headline);
+            background-color: var(--gray-3);
+            color: var(--gray-1);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.loginInput {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    background-color: var(--gray-3);
+
+    label {
+        width: 100%;
+        color: var(--gray-0);
+        font-size: var(--font-size-headlineBold);
+        align-items: baseline;
+        background-color: var(--gray-3);
+    }
+
+    Input {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        padding-left: 16px;
+        background-color: var(--gray-2);
+        border: 1px solid var(--gray-0);
+        border-radius: 4px;
+        color: var(--gray-0);
+        font-size: var(--font-size-title-2);
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    Input::placeholder {
+        color: var(--gray-1);
+    }
+}
