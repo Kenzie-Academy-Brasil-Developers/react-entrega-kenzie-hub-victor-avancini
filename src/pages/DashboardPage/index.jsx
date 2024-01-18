@@ -9,10 +9,12 @@ export const DashboardPage = ({ user, token }) => {
                 <img src={Logo} alt="Logo Kenzie Academy" />
                 <Link to={"/"} className={styles.button}>Sair</Link>
             </nav>
-            <header>
-                <h1>Olá, {user.name}</h1>
-                <p>{user.course_module}</p>
-            </header>
+            <div>
+                <header>
+                    <h1>Olá, {user.name}</h1>
+                    <p>{user.course_module}</p>
+                </header>
+            </div>
             <main>
                 <h1>Que pena! Estamos em desenvolvimento :(</h1>
                 <p>Nossa aplicação está em desenvolvimento, em breve teremos novidades</p>
