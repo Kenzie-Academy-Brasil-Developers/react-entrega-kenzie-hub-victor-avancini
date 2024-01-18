@@ -1,15 +1,10 @@
 import { LoginForm } from "../../components/forms/LoginForm/index"
 import styles from "./style.module.scss"
 import Logo from "../../assets/Logo.svg"
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { api } from "../../services/api";
 
 export const LoginPage = ({ setUser, setToken }) => {
-    const navigate = useNavigate();
-
-    const registerButtonClick = () => {
-        navigate('/register')
-    }
 
     const userLogin = async (formData) => {
         try {
@@ -29,7 +24,7 @@ export const LoginPage = ({ setUser, setToken }) => {
                 <LoginForm userLogin={userLogin} />
                 <div className={styles.registerLogin}>
                     <p>Ainda não possui uma conta?</p>
-                    <button onClick={registerButtonClick}>Cadastre-se</button>
+                    <Link to="/register" className={styles.button}>Cadastre-se</Link>
                 </div>
             </div>
         </div>

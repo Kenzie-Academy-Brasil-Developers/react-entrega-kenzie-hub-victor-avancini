@@ -16,8 +16,6 @@ export const RouteMain = () => {
 
     useEffect(() => {
         if (user && token) {
-            console.log(user)
-            console.log(token)
             navigate('/dashboard');
         }
     }, [user, token]);

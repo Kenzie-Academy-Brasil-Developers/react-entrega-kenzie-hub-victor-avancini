@@ -1,20 +1,13 @@
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Logo from "../../assets/Logo.svg"
 import styles from "./style.module.scss"
 
 export const DashboardPage = ({ user, token }) => {
-
-    const navigate = useNavigate();
-
-      const exitButtonClick = () => {
-        navigate('/')
-    }
-
     return (
         <div className={styles.dashboardContainer}>
             <nav>
                 <img src={Logo} alt="Logo Kenzie Academy" />
-                <button onClick={exitButtonClick}>Sair</button>
+                <Link to={"/"} className={styles.button}>Sair</Link>
             </nav>
             <header>
                 <h1>Olá, {user.name}</h1>

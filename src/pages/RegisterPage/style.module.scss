@@ -15,8 +15,9 @@
             margin: 0;
         }
 
-        button {
+        .button {
             background-color: var(--gray-3);
+            text-decoration: none;
             color: var(--gray-0);
             border: none;
             border-radius: 0.25rem;
