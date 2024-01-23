@@ -1,20 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { RegisterForm } from "../../components/forms/RegisterForm/index"
-import { api } from "../../services/api";
 import Logo from "../../assets/Logo.svg"
 import styles from "./style.module.scss";
 
 export const RegisterPage = () => {
-    const navigate = useNavigate();
-
-    const userRegister = async (formData) => {
-        try {
-            const { data } = await api.post('/users', formData);
-            navigate('/')
-        } catch (error) {
-        }
-    }
-
     return (
         <div className={styles.registerContainer}>
             <div className={styles.registerHeader}>
@@ -24,7 +13,7 @@ export const RegisterPage = () => {
             <div className={styles.registerContent}>
                 <h1>Crie sua conta</h1>
                 <p>Rápido e grátis, vamos nessa</p>
-                <RegisterForm userRegister={userRegister} />
+                <RegisterForm/>
             </div>
         </div>
     )

@@ -3,8 +3,10 @@ import { Input } from "../Input/index";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema } from "../../registerSchema";
 import styles from "./style.module.scss";
+import { useUserContext } from "../../../providers/UserContext";
 
-export const RegisterForm = ({ userRegister }) => {
+export const RegisterForm = () => {
+    const { userRegister } = useUserContext();
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: zodResolver(registerSchema),
